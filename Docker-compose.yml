@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  meteo:
+    build: .
+    container_name: meteo_python_app
+    volumes:
+      - ./meteo_multi.db:/app/meteo_multi.db
+      - ./previsions.csv:/app/previsions.csv
+      - ./rapport_previsions.pdf:/app/rapport_previsions.pdf
